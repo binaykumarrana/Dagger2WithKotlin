@@ -10,4 +10,9 @@ data class Car @Inject constructor(
     fun drive() {
         Log.d("Car", "Driving...")
     }
+
+    @Inject
+    fun enableRemote(remote: Remote){
+        remote.setListener(this)
+    }
 }
