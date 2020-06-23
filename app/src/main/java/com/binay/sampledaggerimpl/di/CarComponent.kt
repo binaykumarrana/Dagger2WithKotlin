@@ -8,7 +8,7 @@ import com.binay.sampledaggerimpl.model.Car
 import dagger.Component
 
 
-@Component(modules = [WheelsModule::class, DieselEngineModule::class])
+@Component(modules = [WheelsModule::class, PetrolEngineModule::class])
 interface CarComponent {
     fun getCar(): Car
     fun inject(mainActivity: MainActivity)

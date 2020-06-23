@@ -2,11 +2,13 @@ package com.binay.sampledaggerimpl.di.module
 
 import com.binay.sampledaggerimpl.model.Engine
 import com.binay.sampledaggerimpl.model.PetrolEngine
-import dagger.Binds
 import dagger.Module
+import dagger.Provides
 
 @Module
-abstract class PetrolEngineModule {
-    @Binds
-    abstract fun bindEngine(engine: PetrolEngine): Engine
+class PetrolEngineModule constructor(private val horsePower: Int) {
+    @Provides
+    fun provideEngine(): Engine {
+        return PetrolEngine(horsePower)
+    }
 }
