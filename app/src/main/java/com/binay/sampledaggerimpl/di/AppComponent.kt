@@ -1,7 +1,7 @@
 package com.binay.sampledaggerimpl.di
 
 import com.binay.sampledaggerimpl.di.module.DriverModule
-import com.binay.sampledaggerimpl.model.Driver
+import com.binay.sampledaggerimpl.di.module.PetrolEngineModule
 import dagger.Component
 import javax.inject.Singleton
 
@@ -9,5 +9,7 @@ import javax.inject.Singleton
 @Component(modules = [DriverModule::class])
 interface AppComponent {
 
-    fun getDriver(): Driver
+    //fun getDriver(): Driver
+
+    fun getActivityComponent(petrolEngineModule: PetrolEngineModule): ActivityComponent
 }
