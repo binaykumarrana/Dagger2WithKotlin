@@ -17,8 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val component =
-            (application as MyApp).getCarComponent().getActivityComponentBuilder().horsePower(100)
-                .engineCapacity(2000).build()
+            (application as MyApp).getCarComponent().getActivityComponentFactory().create(100,2000)
         component.inject(this)
         car1.drive()
         car2.drive()
