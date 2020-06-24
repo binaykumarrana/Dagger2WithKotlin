@@ -1,8 +1,10 @@
 package com.binay.sampledaggerimpl.model
 
 import android.util.Log
+import com.binay.sampledaggerimpl.PerActivity
 import javax.inject.Inject
 
+@PerActivity
 data class Car @Inject constructor(
     private val driver: Driver,
     private val engine: Engine,
